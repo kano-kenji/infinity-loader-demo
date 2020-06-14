@@ -41,15 +41,18 @@ function App() {
     }
 
     //initial data fill out
+
     if (start) {
         let requests = [];
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 4; i++) {
             requests = [...requests, api.get('images/search')];
         }
         axios.all(requests).then(responses => {
+            let responsesData = [];
             responses.map(response => {
-                setData([...data, response.data[0]]);
+                responsesData = [...responsesData, response.data[0]];
             })
+            setData(responsesData);
             setStart(false);
         }).catch(errors => {
             console.log(errors);
