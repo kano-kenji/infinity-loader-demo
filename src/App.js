@@ -72,7 +72,6 @@ function App() {
                                         src={obj.url}
                                     />
                                 </div>
-                                {isLoading.toString()}
                                 {isLoading &&
                                     <span  className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                                 }
