@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/infinity-loader-demo/static/css/main.5f361e03.chunk.css",
-    "main.js": "/infinity-loader-demo/static/js/main.8e5eb2c8.chunk.js",
-    "main.js.map": "/infinity-loader-demo/static/js/main.8e5eb2c8.chunk.js.map",
+    "main.js": "/infinity-loader-demo/static/js/main.1dc92499.chunk.js",
+    "main.js.map": "/infinity-loader-demo/static/js/main.1dc92499.chunk.js.map",
     "runtime-main.js": "/infinity-loader-demo/static/js/runtime-main.4c2f4e6e.js",
     "runtime-main.js.map": "/infinity-loader-demo/static/js/runtime-main.4c2f4e6e.js.map",
     "static/css/2.af3c1da9.chunk.css": "/infinity-loader-demo/static/css/2.af3c1da9.chunk.css",
     "static/js/2.f9b02be0.chunk.js": "/infinity-loader-demo/static/js/2.f9b02be0.chunk.js",
     "static/js/2.f9b02be0.chunk.js.map": "/infinity-loader-demo/static/js/2.f9b02be0.chunk.js.map",
     "index.html": "/infinity-loader-demo/index.html",
-    "precache-manifest.3d90f14b24c974146625a383121533b2.js": "/infinity-loader-demo/precache-manifest.3d90f14b24c974146625a383121533b2.js",
+    "precache-manifest.6be7022e058ff695b0d7ff86ebf36928.js": "/infinity-loader-demo/precache-manifest.6be7022e058ff695b0d7ff86ebf36928.js",
     "service-worker.js": "/infinity-loader-demo/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/infinity-loader-demo/static/css/2.af3c1da9.chunk.css.map",
     "static/css/main.5f361e03.chunk.css.map": "/infinity-loader-demo/static/css/main.5f361e03.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.f9b02be0.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.8e5eb2c8.chunk.js"
+    "static/js/main.1dc92499.chunk.js"
   ]
 }
