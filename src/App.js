@@ -11,7 +11,7 @@ function App() {
     // start a function (addEventListener) from useEffect hook after rendering
     // https://ru.reactjs.org/docs/hooks-reference.html#useeffect
     useEffect(() => {
-        ["mouseup", "touchend"].forEach(function(e) {
+        ['scroll', 'touchend'].forEach(function(e) {
             window.addEventListener(e, handleScroll);
             return () => window.removeEventListener(e, handleScroll);
         });
