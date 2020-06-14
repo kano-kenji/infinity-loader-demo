@@ -5,7 +5,7 @@ import './App.css';
 
 function App() {
     const [data, setData] = useState([]);
-    const [start, setStart] = useState(true);
+    const [initialData, setInitialData] = useState(true);
     const [isLoading, setIsLoading] = useState(false);
 
     // start a function (addEventListener) from useEffect hook after rendering
@@ -41,7 +41,7 @@ function App() {
     }
 
     //initial data fill out. Start with 3 images
-    if (start) {
+    if (initialData) {
         let requests = [];
         for (let i = 0; i < 3; i++) {
             requests = [...requests, api.get('images/search')];
@@ -52,7 +52,7 @@ function App() {
                 responsesData = [...responsesData, response.data[0]];
             })
             setData(responsesData);
-            setStart(false);
+            setInitialData(false);
         }).catch(errors => {
             console.log(errors);
         })
