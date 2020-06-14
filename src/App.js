@@ -48,9 +48,9 @@ function App() {
         }
         axios.all(requests).then(responses => {
             let responsesData = [];
-            responses.map(response => {
+            responses.map(response =>
                 responsesData = [...responsesData, response.data[0]];
-            })
+            )
             setData(responsesData);
             setInitialData(false);
         }).catch(errors => {
