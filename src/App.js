@@ -11,8 +11,8 @@ function App() {
     // https://ru.reactjs.org/docs/hooks-reference.html#useeffect
     useEffect(() => {
         ['scroll', 'touchmove'].forEach(function(e) {
-            window.addEventListener(e, handleScroll);
-            return () => window.removeEventListener(e, handleScroll);
+            document.addEventListener(e, handleScroll);
+            return () => document.removeEventListener(e, handleScroll);
         });
     }, []);
 
