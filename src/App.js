@@ -11,8 +11,8 @@ function App() {
     // start a function (addEventListener) from useEffect hook after rendering
     // https://ru.reactjs.org/docs/hooks-reference.html#useeffect
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        window.addEventListener(('scroll', 'touched'), handleScroll);
+        return () => window.removeEventListener(('scroll', 'touched'), handleScroll);
     }, []);
 
     useEffect(() => {
