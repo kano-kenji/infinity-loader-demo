@@ -4,6 +4,10 @@ import axios from "axios";
 import './App.css';
 
 function App() {
+    const myStyle = {
+        overflowY: 'scroll'
+    }
+
     const [data, setData] = useState([]);
     const [initialData, setInitialData] = useState(true);
     const [isLoading, setIsLoading] = useState(false);
@@ -61,7 +65,7 @@ function App() {
     }
 
     return (
-        <div className="container-fluid">
+        <div className="container-fluid" style={myStyle}>
             <div className="row justify-content-center">
                 <div className="col">
                     {
