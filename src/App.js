@@ -41,7 +41,6 @@ function App() {
     }
 
     //initial data fill out
-
     if (start) {
         let requests = [];
         for (let i = 0; i < 4; i++) {
