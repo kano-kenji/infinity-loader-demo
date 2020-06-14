@@ -40,7 +40,7 @@ function App() {
             });
     }
 
-    //initial data fill out
+    //initial data fill out. Start with 3 images
     if (start) {
         let requests = [];
         for (let i = 0; i < 3; i++) {
