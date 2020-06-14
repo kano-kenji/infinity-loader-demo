@@ -4,12 +4,7 @@ import axios from "axios";
 import './App.css';
 
 function App() {
-    const myStyle = {
-        overflowY: 'scroll'
-    }
-
     const [data, setData] = useState([]);
-    const [initialData, setInitialData] = useState(true);
     const [isLoading, setIsLoading] = useState(false);
 
     // start a function (addEventListener) from useEffect hook after rendering
@@ -47,7 +42,7 @@ function App() {
     }
 
     //initial data fill out. Start with 3 images
-    if (initialData) {
+    if (data.length === 0) {
         let requests = [];
         for (let i = 0; i < 3; i++) {
             requests = [...requests, api.get('images/search')];
@@ -58,14 +53,13 @@ function App() {
                 responsesData = [...responsesData, response.data[0]]
             )
             setData(responsesData);
-            setInitialData(false);
         }).catch(errors => {
             console.log(errors);
         })
     }
 
     return (
-        <div className="container-fluid" style={myStyle}>
+        <div className="container-fluid">
             <div className="row justify-content-center">
                 <div className="col">
                     {
