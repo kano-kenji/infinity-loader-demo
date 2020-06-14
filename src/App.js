@@ -43,7 +43,7 @@ function App() {
     //initial data fill out
     if (start) {
         let requests = [];
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < 3; i++) {
             requests = [...requests, api.get('images/search')];
         }
         axios.all(requests).then(responses => {
