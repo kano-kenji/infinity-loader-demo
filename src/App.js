@@ -9,16 +9,11 @@ function App() {
 
     // start a function (addEventListener) from useEffect hook after rendering
     // https://ru.reactjs.org/docs/hooks-reference.html#useeffect
-    // useEffect(() => {
-    //     ['scroll', 'touchmove'].forEach(function(e) {
-    //         window.addEventListener(e, handleScroll);
-    //         return () => window.removeEventListener(e, handleScroll);
-    //     });
-    // }, []);
-
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        ['scroll', 'touchmove'].forEach(function(e) {
+            window.addEventListener(e, handleScroll);
+            return () => window.removeEventListener(e, handleScroll);
+        });
     }, []);
 
     useEffect(() => {
@@ -35,8 +30,8 @@ function App() {
 
         //offsetHeight - height of a DOM element
         const offsetHeight = document.documentElement.offsetHeight
-console.log((innerHeight + scrollTop)+'!=='+offsetHeight)
-        if (innerHeight + scrollTop !== offsetHeight) return;
+console.log(Math.round(innerHeight + scrollTop)+'!=='+offsetHeight)
+        if (Math.round(innerHeight + scrollTop) !== offsetHeight) return;
 
         setIsFetching(true);
     }
