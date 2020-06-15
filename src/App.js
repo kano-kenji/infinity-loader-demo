@@ -5,7 +5,7 @@ import './App.css';
 
 function App() {
     const [data, setData] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
+    const [isFetching, setIsFetching] = useState(false);
 
     // start a function (addEventListener) from useEffect hook after rendering
     // https://ru.reactjs.org/docs/hooks-reference.html#useeffect
@@ -17,24 +17,24 @@ function App() {
     }, []);
 
     useEffect(() => {
-        if (!isLoading) return;
+        if (!isFetching) return;
         getData();
-    }, [isLoading]);
+    }, [isFetching]);
 
     function handleScroll() {
         //window.innerHeight - Height of window screen in pixels
         //document.documentElement.scrollTop - set of px scrolling from top to bottom a DOM element
         //document.documentElement.offsetHeight - height of a DOM element
         if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight) return;
-        setIsLoading(true);
+        setIsFetching(true);
     }
 
     const getData = () => {
-        setIsLoading(true);
+        setIsFetching(true);
         api.get('images/search')
             .then(function (response) {
                 setData([...data, response.data[0]]);
-                setIsLoading(false);
+                setIsFetching(false);
             })
             .catch(function (error) {
                 console.log(error);
@@ -72,9 +72,6 @@ function App() {
                                         src={obj.url}
                                     />
                                 </div>
-                                {isLoading &&
-                                    <span  className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                }
                             </div>
                         )
                     }
