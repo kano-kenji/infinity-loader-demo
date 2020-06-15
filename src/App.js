@@ -25,7 +25,7 @@ function App() {
         //innerHeight - Height of window screen in pixels
         const innerHeight = window.innerHeight
         // scrollTop - set of px scrolling from top to bottom a DOM element
-        const scrollTop = window.scrollTop;
+        const scrollTop = document.documentElement.scrollTop;
 
         //offsetHeight - height of a DOM element
         const offsetHeight = document.documentElement.scrollHeight
