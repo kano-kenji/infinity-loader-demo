@@ -29,16 +29,15 @@ function App() {
     function handleScroll() {
         //innerHeight - Height of window screen in pixels
         const innerHeight = window.innerHeight
-        //scrollTop - set of px scrolling from top to bottom a DOM element
-        const scrollTop = Math.max(
-            window.pageYOffset,
-            document.documentElement.scrollTop,
-            document.body.scrollTop
-        );
+        // scrollTop - set of px scrolling from top to bottom a DOM element
+        // const scrollTop = document.documentElement.scrollTop;
+        const scrollTop = window.pageYOffset;
+
         //offsetHeight - height of a DOM element
         const offsetHeight = document.documentElement.offsetHeight
-
+console.log((innerHeight + scrollTop)+'!=='+offsetHeight)
         if (innerHeight + scrollTop !== offsetHeight) return;
+
         setIsFetching(true);
     }
 
