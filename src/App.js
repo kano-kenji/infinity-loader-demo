@@ -21,17 +21,25 @@ function App() {
         getData();
     }, [isFetching]);
 
+    const getDocHeight = () => {
+        return Math.max(
+            document.body.scrollHeight, document.documentElement.scrollHeight,
+            document.body.offsetHeight, document.documentElement.offsetHeight,
+            document.body.clientHeight, document.documentElement.clientHeight
+        );
+    }
+
     function handleScroll() {
         //innerHeight - Height of window screen in pixels
         const innerHeight = window.innerHeight
         // scrollTop - set of px scrolling from top to bottom a DOM element
-        // const scrollTop = document.documentElement.scrollTop;
-        const scrollTop = window.pageYOffset;
+        const scrollTop = window.scrollTop;
 
         //offsetHeight - height of a DOM element
-        const offsetHeight = document.documentElement.offsetHeight
-console.log(Math.round(innerHeight + scrollTop)+'!=='+offsetHeight)
-        if (Math.round(innerHeight + scrollTop) !== offsetHeight) return;
+        const offsetHeight = document.documentElement.scrollHeight
+
+        //not near bottom
+        if (Math.round(innerHeight + scrollTop) > (offsetHeight - 100)) return;
 
         setIsFetching(true);
     }
