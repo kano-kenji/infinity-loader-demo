@@ -31,7 +31,8 @@ function App() {
         const offsetHeight = document.documentElement.scrollHeight
 
         //not near bottom
-        if (Math.round(innerHeight + scrollTop) > (offsetHeight - 100)) return;
+        console.log(Math.round(innerHeight + scrollTop) +'<='+ (offsetHeight - 100))
+        if (Math.round(innerHeight + scrollTop) <= (offsetHeight - 100)) return;
 
         setIsFetching(true);
     }
